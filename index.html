@@ -8,10 +8,6 @@
       <title>Processing Demo</title>
       <script type="text/javascript" src="js/processing.js"></script>
   </head>
-  
-  <style>
-    background color: blue;
-  </style>
 
   <body>
 
@@ -33,9 +29,10 @@
 
 
         public void setup() {
+        background(60, 20, 10);
         size(1920, 1080);       /*size*/
         bg = loadImage("IMG_7219.jpg");
-       image(bg, -150, -200, 1920, 1080);
+        image(bg, -150, -200, 1920, 1080);
 
         /*call constructor for hand object*/
        player = new Hand();//calls constructor
