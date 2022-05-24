@@ -13,9 +13,9 @@
 
     <script type="text/processing">
     
-    document.querySelector('p').addEventListner('touchstart', f);
-    document.querySelector('p').addEventListner('touchend', f);
-    document.querySelector('p').addEventListner('touchmove', f);
+    document.querySelector('p').addEventListener('touchstart', f);
+    document.querySelector('p').addEventListener('touchend', f);
+    document.querySelector('p').addEventListener('touchmove', f);
 
     function f(ev){
       console.log( ev.touches, ev.type);
