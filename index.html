@@ -22,6 +22,7 @@
 
         public void draw() {
         //image(bg, 0,0, screenWidht,screenHeight);
+        background(bg);
         player.draw();
   
         }
@@ -29,7 +30,7 @@
 
 
         public void setup() {
-        background(255);
+        
         size(1920, 1080);       /*size*/
         bg = loadImage("IMG_7219.jpg");
         image(bg, -150, -200, 1920, 1080);
