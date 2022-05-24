@@ -16,7 +16,7 @@
     /* PUT YOUR CODE HERE */
     
         PImage bg;
-        int screenWidht = 1008, screenHeight = 1344;
+        int screenWidht = 1920, screenHeight = 1080;
 
         Hand player;
 
@@ -31,7 +31,7 @@
         public void setup() {
         size(720, 1080);       /*size*/
         bg = loadImage("IMG_7219.jpg");
-       image(bg, -150, -200, 1008, 1344);
+       image(bg, -150, -200, 1920, 1080);
 
         /*call constructor for hand object*/
        player = new Hand();//calls constructor
