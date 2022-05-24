@@ -1,32 +1,4 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@yjyjypyp 
-yjyjypyp
-/
-processing_test
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-processing_test/index.html
-@yjyjypyp
-yjyjypyp Update index.html
-Latest commit 22d8f7c 4 hours ago
- History
- 1 contributor
-47 lines (32 sloc)  952 Bytes
-   
+  
 <!Doctype: HTML w/ Processing>
 
 <html>
@@ -42,6 +14,61 @@ Latest commit 22d8f7c 4 hours ago
     <script type="text/processing">
 
     /* PUT YOUR CODE HERE */
+    
+        PImage bg;
+        int screenWidht = 1008, screenHeight = 1344;
+
+        Hand player;
+
+        public void draw() {
+        //image(bg, 0,0, screenWidht,screenHeight);
+        player.draw();
+  
+        }
+
+
+
+        public void setup() {
+        size(720, 1080);       /*size*/
+        bg = loadImage("IMG_7219.jpg");
+       image(bg, -150, -200, 1008, 1344);
+
+        /*call constructor for hand object*/
+       player = new Hand();//calls constructor
+       }
+       
+       public class Hand{
+  /*define properties of a ship*/
+  int x, y; //position
+  int w, h; //size
+  PImage img; /*img for hand*/
+  
+  /*constructor*/
+  /*job of constructor is to setup the variables/properties*/
+  public Hand(){
+    /*setup img for Hand*/
+    img = loadImage("hand.png");
+    imageMode(CORNER);
+    
+    /*w = 100;*/
+     /* h = 100;*/
+    
+    /* x = screenWidth/2 - w/2; */
+     /* y = screenHeight/2 - h/2; */
+    
+  }
+  
+  void draw(){
+    if (mousePressed == true) {
+    image(img, mouseX,mouseY, 800,1000);
+    
+    fill (0);
+    rect(mouseX, mouseY, 80, 80);
+  }
+}
+} 
+
+
         
 
 
